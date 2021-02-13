@@ -123,7 +123,7 @@ module.exports = {
                     }
                     mail.sendMail(option, (err, info) => {
                         if(err){
-                            response(res, { response: 'User Not Verified', msg: 'send failed'}, 200, null)
+                            response(res, { response: 'User Not Verified', msg: 'send failed', detail: err}, 200, null)
                         } else {
                             const tok = jwt.sign({id: userData.id, email: userData.email, role: userData.role_user, pin: userData.pin}, process.env.JWT_KEY);
                             response(res, { response: 'User Not Verified', msg: 'mail sended',key : userData.key_verif, token: tok }, 200, null)
