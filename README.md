@@ -45,8 +45,8 @@ BASE_URL= // http://host:port
 JWT_KEY= // Jwt Key
 URL_VUE_APP= // http://host:port
 
-MAIL= // email for mailer
-MAIL_PASS= // password mailer
+EMAIL_MAILER= // email for mailer
+PW_MAILER= // password mailer
 ```
 
 ### Start Development Server
